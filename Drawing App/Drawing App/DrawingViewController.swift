@@ -57,6 +57,21 @@ class DrawingViewController: UIViewController {
     
     @IBOutlet weak var drawingSaveButton: UIButton!
     
+   
+    @IBOutlet weak var buttonRed: UIButton!
+    @IBOutlet weak var buttonOrange: UIButton!
+    @IBOutlet weak var buttonYellow: UIButton!
+    @IBOutlet weak var buttonGreen: UIButton!
+    @IBOutlet weak var buttonBlue: UIButton!
+    @IBOutlet weak var buttonPurple: UIButton!
+    
+    
+    @IBAction func buttonColors(_ sender: Any) {
+        
+        
+        
+        }
+    
     @IBAction func clickSave(_ sender: Any) {
     
         let renderer = UIGraphicsImageRenderer(size: view.bounds.size)

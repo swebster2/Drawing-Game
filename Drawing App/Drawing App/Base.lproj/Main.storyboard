@@ -306,8 +306,95 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3R-Dp-MLa">
                                 <rect key="frame" x="10" y="743" width="394" height="50"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZJ-fT-tEW">
+                                        <rect key="frame" x="0.0" y="0.0" width="46.5" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleShadowColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonColors:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="zRH-oQ-EP1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vT5-BR-Bo9">
+                                        <rect key="frame" x="46.5" y="0.0" width="46" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Orange">
+                                            <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonColors:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="MKj-LU-cd8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fz-sd-h15">
+                                        <rect key="frame" x="92.5" y="0.0" width="46.5" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Yellow">
+                                            <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonColors:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="52K-nD-wM1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVq-b5-bUy">
+                                        <rect key="frame" x="139" y="0.0" width="46" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Green">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonColors:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="LsY-8E-sNn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qj0-aO-JJy">
+                                        <rect key="frame" x="185" y="0.0" width="46.5" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Blue">
+                                            <color key="titleShadowColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonColors:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="F7x-oZ-X72"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVv-jm-oiP">
+                                        <rect key="frame" x="231.5" y="0.0" width="46" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Purple">
+                                            <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonColors:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="hhN-bF-OrS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="990-eV-vSh">
+                                        <rect key="frame" x="277.5" y="0.0" width="46.5" height="50"/>
+                                        <state key="normal" title="Fav">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonColors:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="zFA-mn-iTm"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-cM-hF5">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                        <rect key="frame" x="324" y="0.0" width="70" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="qZb-5n-N0b"/>
+                                        </constraints>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="clickSave:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="zUn-W8-hTD"/>
@@ -315,7 +402,13 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="OVv-jm-oiP" firstAttribute="width" secondItem="ZZJ-fT-tEW" secondAttribute="width" id="48y-pC-eKr"/>
+                                    <constraint firstItem="990-eV-vSh" firstAttribute="width" secondItem="ZZJ-fT-tEW" secondAttribute="width" id="Mfk-4u-zyX"/>
+                                    <constraint firstItem="vT5-BR-Bo9" firstAttribute="width" secondItem="ZZJ-fT-tEW" secondAttribute="width" id="RFb-lV-Q41"/>
                                     <constraint firstAttribute="height" constant="50" id="RNh-Q9-6EH"/>
+                                    <constraint firstItem="qj0-aO-JJy" firstAttribute="width" secondItem="ZZJ-fT-tEW" secondAttribute="width" id="XqS-DN-Mxs"/>
+                                    <constraint firstItem="jVq-b5-bUy" firstAttribute="width" secondItem="ZZJ-fT-tEW" secondAttribute="width" id="hPn-Eu-Nus"/>
+                                    <constraint firstItem="1Fz-sd-h15" firstAttribute="width" secondItem="ZZJ-fT-tEW" secondAttribute="width" id="xhY-Wi-rfO"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -329,6 +422,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Drawing Pad" image="pencil" catalog="system" id="o22-N8-Neh"/>
                     <connections>
+                        <outlet property="buttonBlue" destination="qj0-aO-JJy" id="eXK-i0-8I2"/>
+                        <outlet property="buttonGreen" destination="jVq-b5-bUy" id="Ae6-3i-rtW"/>
+                        <outlet property="buttonOrange" destination="vT5-BR-Bo9" id="ZMJ-Hb-DK6"/>
+                        <outlet property="buttonPurple" destination="OVv-jm-oiP" id="lxt-FT-Nxa"/>
+                        <outlet property="buttonRed" destination="ZZJ-fT-tEW" id="QBo-4d-8wu"/>
+                        <outlet property="buttonYellow" destination="1Fz-sd-h15" id="dD7-8a-Rqj"/>
                         <outlet property="drawingMainView" destination="OqO-zx-yh8" id="GPu-Dn-FV4"/>
                         <outlet property="drawingSaveButton" destination="bb8-cM-hF5" id="JKa-Qp-mee"/>
                     </connections>
