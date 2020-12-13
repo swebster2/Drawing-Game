@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y5v-8s-gAj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites-->
+        <scene sceneID="5KE-lt-lbe">
+            <objects>
+                <collectionViewController id="ScJ-BM-Uyl" customClass="SwatchesViewController" customModule="Drawing_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Jf6-GI-E41">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="80l-Qp-LaY">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SwatchCell" id="PKp-rW-n8j">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hqi-O2-kMM">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ScJ-BM-Uyl" id="EXf-CI-Hvl"/>
+                            <outlet property="delegate" destination="ScJ-BM-Uyl" id="g8J-4M-S8j"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.fill" catalog="system" id="7mg-g6-kJP"/>
+                    <connections>
+                        <outlet property="MainViewController" destination="Jf6-GI-E41" id="ahW-hD-zfz"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IE1-ZV-9vA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1045" y="80"/>
+        </scene>
+        <!--Color Creator-->
+        <scene sceneID="4p7-nM-Gdv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sz2-Kt-Xbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="nsf-xB-iRH" customClass="ViewController" customModule="Drawing_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BdG-xk-01E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WLu-Hc-pBb">
+                                <rect key="frame" x="42" y="413" width="330" height="380"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yVq-cR-aWn">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="96.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="885-mX-hgd">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="aKo-50-P77">
+                                                <rect key="frame" x="-2" y="20.5" width="334" height="43"/>
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="adjustSlider:" destination="nsf-xB-iRH" eventType="primaryActionTriggered" id="IEV-Ny-xuC"/>
+                                                </connections>
+                                            </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7B-pK-2uX">
+                                                <rect key="frame" x="0.0" y="62.5" width="330" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="adjustInput:" destination="nsf-xB-iRH" eventType="editingDidEnd" id="ua8-YG-dHs"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MSX-4X-tHr">
+                                        <rect key="frame" x="0.0" y="96.5" width="330" height="84.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkl-c7-re8">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="oTV-d1-Zbd">
+                                                <rect key="frame" x="-2" y="20.5" width="334" height="31"/>
+                                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="adjustSlider:" destination="nsf-xB-iRH" eventType="primaryActionTriggered" id="QnO-EA-FJ2"/>
+                                                </connections>
+                                            </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VJa-os-27f">
+                                                <rect key="frame" x="0.0" y="50.5" width="330" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="adjustInput:" destination="nsf-xB-iRH" eventType="editingDidEnd" id="5NR-uV-goI"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GwE-B3-0CS">
+                                        <rect key="frame" x="0.0" y="181" width="330" height="84.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVz-sy-TDB">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Ozb-vp-twh">
+                                                <rect key="frame" x="-2" y="20.5" width="334" height="31"/>
+                                                <color key="thumbTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="adjustSlider:" destination="nsf-xB-iRH" eventType="primaryActionTriggered" id="4Rx-J3-n28"/>
+                                                </connections>
+                                            </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-eU-qg8">
+                                                <rect key="frame" x="0.0" y="50.5" width="330" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="adjustInput:" destination="nsf-xB-iRH" eventType="editingDidEnd" id="6Kw-CT-FAf"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aof-rQ-Qsj">
+                                        <rect key="frame" x="0.0" y="265.5" width="330" height="84.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsZ-yo-1cr">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="kRE-zJ-Cza">
+                                                <rect key="frame" x="-2" y="20.5" width="334" height="31"/>
+                                                <color key="tintColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="adjustSlider:" destination="nsf-xB-iRH" eventType="primaryActionTriggered" id="bNI-Fb-4iG"/>
+                                                </connections>
+                                            </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="255" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bda-9n-l2r">
+                                                <rect key="frame" x="0.0" y="50.5" width="330" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="adjustInput:" destination="nsf-xB-iRH" eventType="editingDidEnd" id="mYo-KP-TUG"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlo-zx-zVs">
+                                        <rect key="frame" x="0.0" y="350" width="330" height="30"/>
+                                        <state key="normal" title="Add to Favorites"/>
+                                        <connections>
+                                            <action selector="clickSave:" destination="nsf-xB-iRH" eventType="primaryActionTriggered" id="boz-Vr-L8F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="3EB-bM-BYC"/>
+                                    <constraint firstItem="MSX-4X-tHr" firstAttribute="top" secondItem="yVq-cR-aWn" secondAttribute="bottom" constant="4" id="JWT-Zt-eTu"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4j-em-kfO">
+                                <rect key="frame" x="84" y="159" width="246" height="224"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="UE3-ZP-rwm"/>
+                                    <constraint firstAttribute="width" constant="224" id="xLt-qF-MP7"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Creator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ko9-em-taV">
+                                <rect key="frame" x="42" y="64" width="330" height="65"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Y4n-e3-Qi5" firstAttribute="trailing" secondItem="Ko9-em-taV" secondAttribute="trailing" constant="42" id="3Wt-lW-psU"/>
+                            <constraint firstItem="Z4j-em-kfO" firstAttribute="top" secondItem="Ko9-em-taV" secondAttribute="bottom" constant="51" id="8pK-AQ-ng9"/>
+                            <constraint firstItem="Y4n-e3-Qi5" firstAttribute="trailing" secondItem="WLu-Hc-pBb" secondAttribute="trailing" constant="42" id="FJW-6n-8GA"/>
+                            <constraint firstItem="WLu-Hc-pBb" firstAttribute="leading" secondItem="Y4n-e3-Qi5" secondAttribute="leading" constant="42" id="FYA-NG-L7P"/>
+                            <constraint firstItem="WLu-Hc-pBb" firstAttribute="leading" secondItem="Y4n-e3-Qi5" secondAttribute="leading" constant="42" id="Ldh-zK-fn0"/>
+                            <constraint firstItem="WLu-Hc-pBb" firstAttribute="top" secondItem="Z4j-em-kfO" secondAttribute="bottom" constant="30" id="T7V-Ss-I9W"/>
+                            <constraint firstItem="Z4j-em-kfO" firstAttribute="leading" secondItem="Y4n-e3-Qi5" secondAttribute="leading" constant="84" id="TtU-a7-i2U"/>
+                            <constraint firstItem="Y4n-e3-Qi5" firstAttribute="bottom" secondItem="WLu-Hc-pBb" secondAttribute="bottom" constant="40" id="aPd-V3-rcT"/>
+                            <constraint firstItem="Ko9-em-taV" firstAttribute="leading" secondItem="Y4n-e3-Qi5" secondAttribute="leading" constant="42" id="iib-Cm-BVK"/>
+                            <constraint firstItem="Y4n-e3-Qi5" firstAttribute="bottom" secondItem="WLu-Hc-pBb" secondAttribute="bottom" constant="20" id="njl-xo-9ZH"/>
+                            <constraint firstItem="Ko9-em-taV" firstAttribute="top" secondItem="Y4n-e3-Qi5" secondAttribute="top" constant="20" id="qDP-lX-pSV"/>
+                            <constraint firstItem="Y4n-e3-Qi5" firstAttribute="trailing" secondItem="WLu-Hc-pBb" secondAttribute="trailing" constant="42" id="sX9-LW-3e0"/>
+                            <constraint firstItem="Y4n-e3-Qi5" firstAttribute="trailing" secondItem="Z4j-em-kfO" secondAttribute="trailing" constant="84" id="wT2-WR-Lsl"/>
+                            <constraint firstItem="Z4j-em-kfO" firstAttribute="top" secondItem="Ko9-em-taV" secondAttribute="bottom" constant="30" id="wnB-iq-cdv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y4n-e3-Qi5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Color Creator" image="paintbrush.fill" catalog="system" id="ma5-Vk-Xjl"/>
+                    <connections>
+                        <outlet property="colorView" destination="Z4j-em-kfO" id="gTW-Dn-P75"/>
+                        <outlet property="inputAlpha" destination="Bda-9n-l2r" id="qdF-9r-Esc"/>
+                        <outlet property="inputBlue" destination="gC8-eU-qg8" id="UfF-d1-PFq"/>
+                        <outlet property="inputGreen" destination="VJa-os-27f" id="EW8-LZ-N1Y"/>
+                        <outlet property="inputRed" destination="o7B-pK-2uX" id="VKE-iO-R8U"/>
+                        <outlet property="labelAlpha" destination="LsZ-yo-1cr" id="cBI-Zb-MLi"/>
+                        <outlet property="labelBlue" destination="hVz-sy-TDB" id="sgm-LA-UBw"/>
+                        <outlet property="labelGreen" destination="rkl-c7-re8" id="GXI-se-N77"/>
+                        <outlet property="labelRed" destination="885-mX-hgd" id="xZa-Kg-yWx"/>
+                        <outlet property="mainView" destination="BdG-xk-01E" id="yAg-yF-d0E"/>
+                        <outlet property="saveButton" destination="Wlo-zx-zVs" id="5XY-Kl-1p8"/>
+                        <outlet property="sliderAlpha" destination="kRE-zJ-Cza" id="sJI-xE-IB4"/>
+                        <outlet property="sliderBlue" destination="Ozb-vp-twh" id="2PT-b9-EIS"/>
+                        <outlet property="sliderGreen" destination="oTV-d1-Zbd" id="ceP-Is-JUI"/>
+                        <outlet property="sliderRed" destination="aKo-50-P77" id="zkG-E0-23w"/>
+                        <outlet property="titleColorCreator" destination="Ko9-em-taV" id="UiX-HF-nim"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1044" y="-551"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="keU-51-1mm">
+            <objects>
+                <tabBarController id="Y5v-8s-gAj" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Efp-9Z-77v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Z5G-jq-lkc" kind="relationship" relationship="viewControllers" id="A9n-Ud-l22"/>
+                        <segue destination="nsf-xB-iRH" kind="relationship" relationship="viewControllers" id="SH2-GZ-ACG"/>
+                        <segue destination="ScJ-BM-Uyl" kind="relationship" relationship="viewControllers" id="BUU-Va-8Hh"/>
+                        <segue destination="Omq-9r-thf" kind="relationship" relationship="viewControllers" id="hWJ-AX-yZe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czo-ca-b3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1963" y="-225"/>
+        </scene>
+        <!--Gallery-->
+        <scene sceneID="SnU-hL-cke">
+            <objects>
+                <collectionViewController id="Omq-9r-thf" customClass="GalleryViewController" customModule="Drawing_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hck-lG-CBp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m3o-wD-XYC">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DrawingCell" id="3jV-uU-w6N">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HI9-NY-fEn">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Omq-9r-thf" id="948-Rk-Tu5"/>
+                            <outlet property="delegate" destination="Omq-9r-thf" id="SrW-a1-NGf"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="square.grid.2x2.fill" catalog="system" id="w1X-dn-JSp"/>
+                    <connections>
+                        <outlet property="galleryView" destination="hck-lG-CBp" id="jjh-hq-hAJ"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYO-ox-E3e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2810" y="80"/>
+        </scene>
+        <!--Drawing Pad-->
+        <scene sceneID="kLl-xb-mPg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gO0-cL-LCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Z5G-jq-lkc" customClass="DrawingViewController" customModule="Drawing_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OqO-zx-yh8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3R-Dp-MLa">
+                                <rect key="frame" x="10" y="743" width="394" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-cM-hF5">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="clickSave:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="zUn-W8-hTD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="RNh-Q9-6EH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="a3R-Dp-MLa" firstAttribute="leading" secondItem="btM-re-QfU" secondAttribute="leading" constant="10" id="VoI-lr-UF5"/>
+                            <constraint firstItem="btM-re-QfU" firstAttribute="trailing" secondItem="a3R-Dp-MLa" secondAttribute="trailing" constant="10" id="s1q-i6-0k4"/>
+                            <constraint firstItem="btM-re-QfU" firstAttribute="bottom" secondItem="a3R-Dp-MLa" secondAttribute="bottom" constant="20" id="yxK-gk-mJA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="btM-re-QfU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Drawing Pad" image="pencil" catalog="system" id="o22-N8-Neh"/>
+                    <connections>
+                        <outlet property="drawingMainView" destination="OqO-zx-yh8" id="GPu-Dn-FV4"/>
+                        <outlet property="drawingSaveButton" destination="bb8-cM-hF5" id="JKa-Qp-mee"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2810.144927536232" y="-551.11607142857144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paintbrush.fill" catalog="system" width="128" height="125"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
