@@ -9,47 +9,6 @@
 import Foundation
 import UIKit
 
-class Canvas: UIView {
-    
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-        guard let context = UIGraphicsGetCurrentContext() else {return}
-        
-        context.setStrokeColor(UIColor.red.cgColor)
-        context.setLineWidth(10)
-        context.setLineCap(.butt)
-
-        lines.forEach { (line) in
-            for (i, p) in line.enumerated() {
-                if i == 0 {
-                    context.move(to: p)
-                } else {
-                    context.addLine(to: p)
-                }
-            }
-        }
-        
-        context.strokePath()
-    }
-    
-    var lines = [[CGPoint]]()
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        lines.append([CGPoint]())
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let point = touches.first?.location(in: nil) else { return }
-        
-        guard var lastLine = lines.popLast() else { return }
-        lastLine.append(point)
-        lines.append(lastLine)
-        
-        setNeedsDisplay()
-    }
-}
-
 class DrawingViewController: UIViewController {
 
     //Object Connections
@@ -63,42 +22,67 @@ class DrawingViewController: UIViewController {
     @IBOutlet weak var buttonYellow: UIButton!
     @IBOutlet weak var buttonGreen: UIButton!
     @IBOutlet weak var buttonBlue: UIButton!
-    @IBOutlet weak var buttonPurple: UIButton!
+    @IBOutlet weak var buttonEraser: UIButton!
+    @IBOutlet weak var buttonFavorite: UIButton!
+    @IBOutlet weak var buttonUndo: UIButton!
+    
+    
+    
+    @IBAction func pressButtonOrange(_ sender: Any) {
+        
+        canvas.setStrokeColor(color: .orange)
+        
+    }
+    
+    @IBAction func pressButtonRed(_ sender: Any) {
+        canvas.setStrokeColor(color: .red)
+    }
+    
+    @IBAction func pressButtonYellow(_ sender: Any) {
+        canvas.setStrokeColor(color: .yellow)
+    }
+    
+    @IBAction func pressButtonGreen(_ sender: Any) {
+        canvas.setStrokeColor(color: .green)
+    }
+    
+    @IBAction func pressButtonBlue(_ sender: Any) {
+        canvas.setStrokeColor(color: .blue)
+    }
+
+    
+    @IBAction func pressButtonFav(_ sender: Any) {
+        if buttonFavorite.backgroundColor == UIColor.clear {
+            
+        }
+    }
+    
+    @IBAction func pressButtonUndo(_ sender: Any) {
+        canvas.undo()
+    
+    }
     
     
     @IBAction func buttonColors(_ sender: Any) {
         
-        
-        
-        }
+
+    }
     
     @IBAction func clickSave(_ sender: Any) {
     
         let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
         let image = renderer.image { ctx in view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         }
-    
-        
-        
-        
-       
-        
-        
-        
-        
-        
-        
-        
         
     }
     
-    let canvas = Canvas()
+    let canvas = DrawingPad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(canvas)
-        canvas.frame = view.frame
+        canvas.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height - 175)
         canvas.backgroundColor = .clear
 
         
