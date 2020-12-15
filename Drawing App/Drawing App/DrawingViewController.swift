@@ -29,9 +29,7 @@ class DrawingViewController: UIViewController {
     
     
     @IBAction func pressButtonOrange(_ sender: Any) {
-        
         canvas.setStrokeColor(color: .orange)
-        
     }
     
     @IBAction func pressButtonRed(_ sender: Any) {
@@ -53,7 +51,10 @@ class DrawingViewController: UIViewController {
     
     @IBAction func pressButtonFav(_ sender: Any) {
         if buttonFavorite.backgroundColor == UIColor.clear {
+            self.tabBarController!.selectedIndex = 2
+        } else {
             
+            canvas.setStrokeColor(color: buttonFavorite.backgroundColor ?? .red)
         }
     }
     
