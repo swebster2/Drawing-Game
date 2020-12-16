@@ -190,7 +190,6 @@ extension SwatchesViewController {
     colorTab.sliderBlue.value = Float(cellColorArray.blue)
     colorTab.sliderAlpha.value = Float(cellColorArray.alpha)
     colorTab.adjustSlider(self)
-    
 
     self.tabBarController!.selectedIndex = 0
 

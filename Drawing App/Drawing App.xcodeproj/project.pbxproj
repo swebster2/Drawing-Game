@@ -21,7 +21,6 @@
 		F3A09DE525847E9B00551699 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A09DE425847E9B00551699 /* GalleryViewController.swift */; };
 		F3A09DE725847FB100551699 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A09DE625847FB100551699 /* DrawingViewController.swift */; };
 		F3A09DE92584832200551699 /* DrawingStorageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A09DE82584832200551699 /* DrawingStorageHandler.swift */; };
-		F3A09DEB258483BA00551699 /* DrawingSlideUpViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A09DEA258483BA00551699 /* DrawingSlideUpViewCell.swift */; };
 		F3A09DED2584842000551699 /* DrawingObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A09DEC2584842000551699 /* DrawingObjects.swift */; };
 		F3A09DEF2588009400551699 /* DrawingPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A09DEE2588009400551699 /* DrawingPad.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		F3A09DE425847E9B00551699 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		F3A09DE625847FB100551699 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		F3A09DE82584832200551699 /* DrawingStorageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingStorageHandler.swift; sourceTree = "<group>"; };
-		F3A09DEA258483BA00551699 /* DrawingSlideUpViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingSlideUpViewCell.swift; sourceTree = "<group>"; };
 		F3A09DEC2584842000551699 /* DrawingObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingObjects.swift; sourceTree = "<group>"; };
 		F3A09DEE2588009400551699 /* DrawingPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +93,6 @@
 				F3A09DE425847E9B00551699 /* GalleryViewController.swift */,
 				F3A09DE82584832200551699 /* DrawingStorageHandler.swift */,
 				F3A09DEC2584842000551699 /* DrawingObjects.swift */,
-				F3A09DEA258483BA00551699 /* DrawingSlideUpViewCell.swift */,
 			);
 			path = "Drawing App";
 			sourceTree = "<group>";
@@ -179,7 +176,6 @@
 				F3A09DDE2584707D00551699 /* StorageHandler.swift in Sources */,
 				F3A09DD9258452EB00551699 /* SwatchesViewController.swift in Sources */,
 				F3A09DE525847E9B00551699 /* GalleryViewController.swift in Sources */,
-				F3A09DEB258483BA00551699 /* DrawingSlideUpViewCell.swift in Sources */,
 				F3A09DDD2584707700551699 /* ColorObjects.swift in Sources */,
 				F3A09DED2584842000551699 /* DrawingObjects.swift in Sources */,
 				F3A09DBF258438B100551699 /* SceneDelegate.swift in Sources */,

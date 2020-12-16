@@ -11,6 +11,8 @@ import UIKit
 
 class DrawingViewController: UIViewController {
 
+    var galleryDefaults: UserDefaults!
+    
     //Object Connections
     @IBOutlet var drawingMainView: UIView!
     
@@ -22,7 +24,6 @@ class DrawingViewController: UIViewController {
     @IBOutlet weak var buttonYellow: UIButton!
     @IBOutlet weak var buttonGreen: UIButton!
     @IBOutlet weak var buttonBlue: UIButton!
-    @IBOutlet weak var buttonEraser: UIButton!
     @IBOutlet weak var buttonFavorite: UIButton!
     @IBOutlet weak var buttonUndo: UIButton!
     
@@ -50,17 +51,18 @@ class DrawingViewController: UIViewController {
 
     
     @IBAction func pressButtonFav(_ sender: Any) {
-        if buttonFavorite.backgroundColor == UIColor.clear {
-            self.tabBarController!.selectedIndex = 2
-        } else {
+       
+       // buttonFavorite.backgroundColor = UIColor.red
+        //if buttonFavorite.backgroundColor == UIColor.clear {
+          //  self.tabBarController!.selectedIndex = 2
+      //  } else {
             
-            canvas.setStrokeColor(color: buttonFavorite.backgroundColor ?? .red)
-        }
+       //     canvas.setStrokeColor(color: buttonFavorite.backgroundColor ?? .red)
+      //  }
     }
     
     @IBAction func pressButtonUndo(_ sender: Any) {
         canvas.undo()
-    
     }
     
     
@@ -71,9 +73,7 @@ class DrawingViewController: UIViewController {
     
     @IBAction func clickSave(_ sender: Any) {
     
-        let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
-        let image = renderer.image { ctx in view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
-        }
+        DrawingStorageHandler.set(key: "myValue", value: [canvas.lines])
         
     }
     
@@ -90,6 +90,8 @@ class DrawingViewController: UIViewController {
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(ViewController.didTapView))
         self.view.addGestureRecognizer(tapRecognizer)
+    
+        
     }
 
     @objc func didTapView() {
