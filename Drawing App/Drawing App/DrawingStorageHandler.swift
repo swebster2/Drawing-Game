@@ -11,6 +11,7 @@ import UIKit
 
 struct DrawingStorageHandler {
     static var drawingDefaults: UserDefaults = UserDefaults.standard
+
     
     static func isSet(key: String) -> Bool {
         return UserDefaults.standard.object(forKey: key) != nil
@@ -19,6 +20,4 @@ struct DrawingStorageHandler {
     static func set(key: String, value: Any) {
         drawingDefaults.set(value, forKey: key)
     }
-    
-    
 }

@@ -17,8 +17,8 @@ class DrawingViewController: UIViewController {
     @IBOutlet var drawingMainView: UIView!
     
     @IBOutlet weak var drawingSaveButton: UIButton!
-    
-   
+    @IBOutlet weak var buttonShare: UIButton!
+
     @IBOutlet weak var buttonRed: UIButton!
     @IBOutlet weak var buttonOrange: UIButton!
     @IBOutlet weak var buttonYellow: UIButton!
@@ -72,10 +72,25 @@ class DrawingViewController: UIViewController {
     }
     
     @IBAction func clickSave(_ sender: Any) {
-    
-        DrawingStorageHandler.set(key: "myValue", value: [canvas.lines])
+        
+        DrawingStorageHandler.set(key: "drawingColection", value: canvas.lines)
         
     }
+    
+    @IBAction func shareImageButton(_ sender: Any) {
+        
+        let image = UIImage(named: "Image")
+
+        // set up activity view controller
+        let imageToShare = [ image! ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+ 
     
     let canvas = DrawingPad()
     
@@ -98,3 +113,5 @@ class DrawingViewController: UIViewController {
         self.view.endEditing(true)
     }
 }
+
+

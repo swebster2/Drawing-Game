@@ -418,10 +418,19 @@
                                     <constraint firstItem="990-eV-vSh" firstAttribute="width" secondItem="ZZJ-fT-tEW" secondAttribute="width" id="uLj-OU-Cl6"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECv-js-blH">
+                                <rect key="frame" x="20" y="64" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareImageButton:" destination="Z5G-jq-lkc" eventType="touchUpInside" id="0xT-3O-dwE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="a3R-Dp-MLa" firstAttribute="leading" secondItem="btM-re-QfU" secondAttribute="leading" constant="10" id="VoI-lr-UF5"/>
+                            <constraint firstItem="ECv-js-blH" firstAttribute="leading" secondItem="btM-re-QfU" secondAttribute="leading" constant="20" id="ZYQ-Ek-obX"/>
+                            <constraint firstItem="ECv-js-blH" firstAttribute="top" secondItem="btM-re-QfU" secondAttribute="top" constant="20" id="agB-DR-Kfv"/>
                             <constraint firstItem="btM-re-QfU" firstAttribute="trailing" secondItem="a3R-Dp-MLa" secondAttribute="trailing" constant="10" id="s1q-i6-0k4"/>
                             <constraint firstItem="btM-re-QfU" firstAttribute="bottom" secondItem="a3R-Dp-MLa" secondAttribute="bottom" constant="20" id="yxK-gk-mJA"/>
                         </constraints>
@@ -434,6 +443,7 @@
                         <outlet property="buttonGreen" destination="jVq-b5-bUy" id="Ae6-3i-rtW"/>
                         <outlet property="buttonOrange" destination="vT5-BR-Bo9" id="ZMJ-Hb-DK6"/>
                         <outlet property="buttonRed" destination="ZZJ-fT-tEW" id="QBo-4d-8wu"/>
+                        <outlet property="buttonShare" destination="ECv-js-blH" id="BoB-5e-Rhf"/>
                         <outlet property="buttonUndo" destination="UqC-Hd-hlr" id="S2N-8M-olb"/>
                         <outlet property="buttonYellow" destination="1Fz-sd-h15" id="dD7-8a-Rqj"/>
                         <outlet property="drawingMainView" destination="OqO-zx-yh8" id="GPu-Dn-FV4"/>
